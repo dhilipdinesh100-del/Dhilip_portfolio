@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     vy: (Math.random() - 0.5) * 0.4,
                     vz: (Math.random() - 0.5) * 0.3,
                     radius: Math.random() * 1.8 + 1.2,
-                    color: Math.random() > 0.4 ? '#00e5ff' : '#6366f1'
+                    color: Math.random() > 0.35 ? '#7CFC00' : '#9aff33'
                 });
             }
         }
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ctx.beginPath();
                 ctx.moveTo(p1.px, p1.py);
                 ctx.lineTo(p2.px, p2.py);
-                ctx.strokeStyle = 'rgba(56, 189, 248, 0.12)';
+                ctx.strokeStyle = 'rgba(124, 252, 0, 0.16)';
                 ctx.stroke();
             });
 
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ctx.beginPath();
                         ctx.moveTo(n1.px, n1.py);
                         ctx.lineTo(n2.px, n2.py);
-                        ctx.strokeStyle = `rgba(0, 229, 255, ${alpha})`;
+                        ctx.strokeStyle = `rgba(124, 252, 0, ${alpha})`;
                         ctx.stroke();
                     }
                 }
