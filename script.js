@@ -1,82 +1,131 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav a').forEach(link => {
+// Mobile Navigation Toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        const icon = menuToggle.querySelector('i');
+        if (icon) {
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+    });
+}
+
+// Smooth scrolling for navigation and anchor links
+document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function(e) {
-        if (this.getAttribute('href').startsWith('#')) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href'))
-                .scrollIntoView({
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        } else if (targetId && targetId.startsWith('#')) {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({
                     behavior: 'smooth'
                 });
+            }
+        }
+
+        // Close mobile menu on link click
+        if (navMenu && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            const icon = menuToggle?.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
         }
     });
 });
 
-// Typing animation
+// Typing animation for Role
 const text = "ECE Student | Full Stack Developer";
 let i = 0;
 const title = document.querySelector(".role");
 
-title.innerHTML = "";
-
-function typing() {
-    if (i < text.length) {
-        title.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typing, 80);
+if (title) {
+    title.innerHTML = "";
+    function typing() {
+        if (i < text.length) {
+            title.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, 80);
+        }
     }
+    window.addEventListener('DOMContentLoaded', typing);
 }
 
-window.onload = typing;
-
-// Scroll animation
-const reveals = document.querySelectorAll(".hero-text, .hero-image");
+// Scroll animation for elements
+const revealElements = document.querySelectorAll(
+    ".hero-text, .hero-image, .about-left, .about-right, .experience-card, .skill-card, .project-card, .edu-card, .sih-card, .cert-card, .contact-box, form"
+);
 
 function reveal() {
-    reveals.forEach(item => {
+    const windowHeight = window.innerHeight;
+    revealElements.forEach(item => {
         const top = item.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        if (top < windowHeight - 100) {
+        if (top < windowHeight - 80) {
             item.style.opacity = "1";
             item.style.transform = "translateY(0)";
         }
     });
 }
 
-reveals.forEach(item => {
+revealElements.forEach(item => {
     item.style.opacity = "0";
-    item.style.transform = "translateY(50px)";
-    item.style.transition = "1s";
+    item.style.transform = "translateY(35px)";
+    item.style.transition = "opacity 0.8s ease, transform 0.8s ease";
 });
 
 window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
 reveal();
+
+// Contact Form submission via EmailJS
 const form = document.getElementById("contact-form");
 
-form.addEventListener("submit", function(e) {
+if (form) {
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
 
-    e.preventDefault();
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn ? submitBtn.innerText : "Send Message";
 
-    emailjs.sendForm(
-        "service_807",
-        "template_216xi8b",
-        this
-    )
+        if (submitBtn) {
+            submitBtn.innerText = "Sending...";
+            submitBtn.disabled = true;
+        }
 
-    .then(() => {
-
-        alert("✅ Message sent successfully!");
-
-        form.reset();
-
-    })
-
-    .catch((error) => {
-
-        alert("❌ Failed to send message.");
-
-        console.log(error);
-
+        emailjs.sendForm(
+            "service_807",
+            "template_216xi8b",
+            this
+        )
+        .then(() => {
+            alert("✅ Message sent successfully!");
+            form.reset();
+        })
+        .catch((error) => {
+            alert("❌ Failed to send message. Please try again later.");
+            console.error("EmailJS error:", error);
+        })
+        .finally(() => {
+            if (submitBtn) {
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
     });
-
-});
+}

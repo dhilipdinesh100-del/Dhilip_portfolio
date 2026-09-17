@@ -3,41 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yelakala Dhilip | Portfolio</title>
+    <title>Yelakala Dhilip | Portfolio - Full Stack Developer & ECE Student</title>
+    <meta name="description" content="Personal portfolio of Yelakala Dhilip - B.Tech Electronics and Communication Engineering student and Full Stack Developer skilled in React, Python, Node.js, Express, Flask, and Computer Vision.">
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
 <header>
+    <nav>
+        <a href="#" class="nav-logo"><h2>Dhilip</h2></a>
 
-<nav>
-    <h2>Dhilip</h2>
+        <div class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </div>
 
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+        <ul id="nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-    <a href="assets/resume.pdf" class="resume-btn" download>
-        Download Resume
-    </a>
-
-</nav>
+        <a href="assets/resume.pdf" class="resume-btn" download="Yelakala_Dhilip_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-file-arrow-down"></i> Resume
+        </a>
+    </nav>
 </header> 
-<section class="hero">
 
+<!-- HERO SECTION -->
+<section class="hero" id="home">
     <div class="hero-text">
-
         <p class="hello">👋 Hello, I'm</p>
 
         <h1>
@@ -50,14 +56,10 @@
         </div>
 
         <p class="hero-desc">
-            I build responsive and user-friendly web applications using
-            HTML, CSS, JavaScript and Python. I enjoy creating innovative
-            websites and electronics projects while continuously learning
-            new technologies.
+            B.Tech Electronics and Communication Engineering student with a 9.07 CGPA and hands-on experience in frontend and full-stack web development. Skilled in Python, JavaScript, HTML5, CSS3, React, Node.js, Express.js, Flask, SQL, MongoDB, Git and GitHub. Completed a 1-month Frontend Developer internship at InternSpark and currently pursuing full-stack development training through NxtWave.
         </p>
 
         <div class="hero-buttons">
-
             <a href="#projects" class="btn-primary">
                 View My Work →
             </a>
@@ -65,358 +67,472 @@
             <a href="#contact" class="btn-secondary">
                 Contact Me
             </a>
-
         </div>
 
         <div class="hero-social">
-
-            <a href="https://github.com/dhilipdinesh100-del" target="_blank">
+            <a href="https://github.com/dhilipdinesh100-del" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <i class="fab fa-github"></i>
             </a>
 
-            <a href="https://www.linkedin.com/in/dhilipdinesh" target="_blank">
+            <a href="https://linkedin.com/in/dhilipdinesh" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <i class="fab fa-linkedin"></i>
             </a>
 
-            <a href="mailto:dhilipdinesh100@gmail.com">
+            <a href="mailto:dhilipdinesh100@gmail.com" aria-label="Email">
                 <i class="fas fa-envelope"></i>
             </a>
-
         </div>
-
     </div>
 
     <div class="hero-image">
-
         <div class="circle">
-            <img src="assets/dhilip.jpg" alt="Dhilip">
+            <img src="assets/dhilip.jpg" alt="Yelakala Dhilip">
         </div>
-
     </div>
-
 </section>
+
+<!-- ABOUT SECTION -->
 <section class="about" id="about">
-
     <div class="about-left">
-
         <h5>Get To Know</h5>
-
         <h2>About Me</h2>
 
         <p>
-            I'm <span>Yelakala Dhilip</span>, a third-year B.Tech Electronics
-            and Communication Engineering student at
-            <span>Raghu Engineering College</span> with a CGPA of
-            <span>9.0</span>.
-
-            I enjoy building responsive websites using HTML, CSS,
-            JavaScript and Python. Along with web development,
-            I'm passionate about electronics projects and solving
-            real-world problems through technology.
+            I'm <span>Yelakala Dhilip</span>, an Electronics and Communication Engineering student at <span>Raghu Engineering College, Visakhapatnam</span> (2024–2028) holding a <span>9.07 CGPA</span>. I combine hardware and electronics curiosity with full-stack software development expertise.
         </p>
 
-        <a href="#projects" class="about-btn">
-            View Projects →
-        </a>
+        <p>
+            My skillset spans modern frontend engineering with <span>React, Vite, HTML5, CSS3, and JavaScript</span>, and backend systems with <span>Node.js, Express.js, Flask, REST APIs, SQL, and MongoDB</span>. I completed a 1-month <span>Frontend Developer Internship at InternSpark</span> and am actively sharpening my full-stack capabilities with <span>NxtWave Academy</span>.
+        </p>
 
+        <a href="assets/resume.pdf" class="about-btn" download="Yelakala_Dhilip_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-download"></i> Download Resume
+        </a>
     </div>
 
     <div class="about-right">
-
         <div class="info-card">
             <i class="fas fa-user-graduate"></i>
             <h3>Education</h3>
             <p>B.Tech ECE</p>
-            <small>3rd Year</small>
+            <small>Raghu Engg College (2024–2028)</small>
         </div>
 
         <div class="info-card">
             <i class="fas fa-star"></i>
             <h3>CGPA</h3>
-            <p>9.0</p>
-            <small>Till Present</small>
+            <p>9.07</p>
+            <small>Academic Performance</small>
+        </div>
+
+        <div class="info-card">
+            <i class="fas fa-briefcase"></i>
+            <h3>Experience</h3>
+            <p>Frontend Intern</p>
+            <small>InternSpark (1-Month)</small>
         </div>
 
         <div class="info-card">
             <i class="fas fa-laptop-code"></i>
-            <h3>Projects</h3>
-            <p>2+</p>
-            <small>Completed</small>
+            <h3>Featured Projects</h3>
+            <p>2+ Key Systems</p>
+            <small>Full-Stack & Computer Vision</small>
         </div>
-
-        <div class="info-card">
-            <i class="fas fa-lightbulb"></i>
-            <h3>Interest</h3>
-            <p>Electronics</p>
-            <small>Innovations</small>
-        </div>
-
     </div>
-
 </section>
-<section id="education" class="education">
 
+<!-- EXPERIENCE SECTION -->
+<section id="experience" class="experience">
     <h5>My Journey</h5>
-    <h2>Education</h2>
+    <h2>Experience</h2>
 
-    <div class="edu-card">
-
-        <div class="edu-icon">
-            🎓
+    <div class="experience-container">
+        <div class="experience-card">
+            <div class="exp-icon">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="exp-content">
+                <h3>Frontend Developer Intern</h3>
+                <h4>InternSpark <span class="exp-badge">1-Month Internship</span></h4>
+                <ul class="exp-features">
+                    <li>Built practical frontend applications using HTML, CSS and JavaScript as part of a structured internship program.</li>
+                    <li>Strengthened responsive UI development, JavaScript interaction and hands-on web development skills through project-based work.</li>
+                </ul>
+            </div>
         </div>
-
-        <div class="edu-content">
-
-            <h3>B.Tech - Electronics & Communication Engineering</h3>
-
-            <h4>Raghu Engineering College</h4>
-
-            <p><strong>Present:</strong> Third Year</p>
-
-            <p><strong>CGPA:</strong> 9.0</p>
-
-            <p>
-                Building strong knowledge in Electronics,
-                Communication Systems and Full Stack Development.
-            </p>
-
-        </div>
-
     </div>
-
 </section>
-<section id="skills" class="skills">
 
+<!-- SKILLS SECTION -->
+<section id="skills" class="skills">
     <h5>What I Know</h5>
-    <h2>My Skills</h2>
+    <h2>Technical Skills</h2>
 
     <div class="skills-container">
-
         <div class="skill-card">
-            <i class="fab fa-html5"></i>
-            <h3>HTML5</h3>
-            <p>Semantic & Responsive Web Development</p>
+            <i class="fas fa-code"></i>
+            <h3>Languages</h3>
+            <div class="skill-tags">
+                <span>Python</span>
+                <span>JavaScript</span>
+            </div>
         </div>
 
         <div class="skill-card">
-            <i class="fab fa-css3-alt"></i>
-            <h3>CSS3</h3>
-            <p>Modern UI, Flexbox, Grid & Animations</p>
+            <i class="fas fa-desktop"></i>
+            <h3>Frontend</h3>
+            <div class="skill-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>React</span>
+                <span>Vite</span>
+            </div>
         </div>
 
         <div class="skill-card">
-            <i class="fab fa-js"></i>
-            <h3>JavaScript</h3>
-            <p>Interactive & Dynamic Websites</p>
+            <i class="fas fa-server"></i>
+            <h3>Backend</h3>
+            <div class="skill-tags">
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>Flask</span>
+                <span>REST APIs</span>
+            </div>
         </div>
 
         <div class="skill-card">
-            <i class="fab fa-python"></i>
-            <h3>Python</h3>
-            <p>Programming & Problem Solving</p>
+            <i class="fas fa-database"></i>
+            <h3>Database</h3>
+            <div class="skill-tags">
+                <span>SQL</span>
+                <span>SQLite</span>
+                <span>MongoDB</span>
+            </div>
         </div>
 
         <div class="skill-card">
-            <i class="fab fa-git-alt"></i>
-            <h3>Git</h3>
-            <p>Version Control</p>
+            <i class="fas fa-tools"></i>
+            <h3>Tools & Libraries</h3>
+            <div class="skill-tags">
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>OpenCV</span>
+                <span>Chart.js</span>
+                <span>OpenPyXL</span>
+            </div>
         </div>
-
-        <div class="skill-card">
-            <i class="fab fa-github"></i>
-            <h3>GitHub</h3>
-            <p>Project Hosting & Collaboration</p>
-        </div>
-
     </div>
-
 </section>
 
+<!-- PROJECTS SECTION -->
 <section id="projects" class="projects">
-
     <h5>My Recent Work</h5>
     <h2>Projects</h2>
 
     <div class="projects-container">
-
-        <!-- Calculator Project -->
+        <!-- Project 1: CampusResolve -->
         <div class="project-card">
-
-            <div class="project-icon">
-                <i class="fas fa-calculator"></i>
+            <div class="project-header">
+                <div class="project-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <span class="project-category">Full-Stack Web App</span>
             </div>
 
-            <h3>Calculator App</h3>
+            <h3>CampusResolve</h3>
+            <h4 class="project-subtitle">Full-Stack College Complaint Management System</h4>
 
             <p>
-                A responsive calculator built using HTML, CSS and JavaScript.
-                It performs basic arithmetic operations with a clean and
-                user-friendly interface.
+                Developed a full-stack complaint-management platform with role-based workflows for students, staff and administrators.
             </p>
 
+            <ul class="project-features">
+                <li>Complaint tracking and department/staff assignment</li>
+                <li>Analytics dashboards and audit history</li>
+                <li>File attachments and REST APIs</li>
+                <li>JWT authentication and bcrypt-based password security</li>
+                <li>Responsive React interface with Vite tooling</li>
+            </ul>
+
             <div class="tech-stack">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
+                <span>React</span>
+                <span>Vite</span>
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>MongoDB</span>
+                <span>JWT</span>
+                <span>bcrypt</span>
             </div>
 
             <div class="project-buttons">
-
-                <!-- Replace # with your Calculator live URL -->
-                <a href=" https://dhilipdinesh100-del.github.io/Dhilip_Calculator/" target="_blank" rel="noopener noreferrer">
+                <a href="https://dhilipdinesh100-del.github.io/college-complaint/" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-eye"></i> Live Demo
                 </a>
 
-                <a href="https://github.com/dhilipdinesh100-del/CodeAlpha_Calculator.git"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a href="https://github.com/dhilipdinesh100-del/college-complaint" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i> GitHub
                 </a>
-
             </div>
-
         </div>
 
-
-        <!-- Music Project -->
+        <!-- Project 2: SmartAttend -->
         <div class="project-card">
-
-            <div class="project-icon">
-                <i class="fas fa-music"></i>
+            <div class="project-header">
+                <div class="project-icon">
+                    <i class="fas fa-id-card-clip"></i>
+                </div>
+                <span class="project-category">Computer Vision & Web</span>
             </div>
 
-            <h3>MelodyX - Music Player</h3>
+            <h3>SmartAttend</h3>
+            <h4 class="project-subtitle">Attendance Management System</h4>
 
             <p>
-                A responsive music player web application where users can
-                explore, search, upload and play songs with a modern,
-                user-friendly interface.
+                Developed an attendance platform combining QR-based and face-recognition workflows with student management and reporting.
             </p>
 
+            <ul class="project-features">
+                <li>QR-based and face-recognition attendance</li>
+                <li>Student management and attendance reporting</li>
+                <li>Interactive dashboards, attendance views, and validation flows</li>
+                <li>Attendance record export using OpenPyXL</li>
+                <li>Flask backend workflows and OpenCV computer-vision functionality</li>
+            </ul>
+
             <div class="tech-stack">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
+                <span>Python</span>
+                <span>Flask</span>
+                <span>SQLite</span>
+                <span>OpenCV</span>
+                <span>Face Recognition</span>
+                <span>QR Code</span>
+                <span>Chart.js</span>
+                <span>OpenPyXL</span>
             </div>
 
             <div class="project-buttons">
-
-                <!-- Music Project Live Demo -->
-                <a href="https://dhilipdinesh100-del.github.io/CodeAlpha_Music/"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a href="https://dhilipdinesh100-del.github.io/smart-attend/" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-eye"></i> Live Demo
                 </a>
 
-                <!-- Music Project GitHub -->
-                <a href="https://github.com/dhilipdinesh100-del/CodeAlpha_Music"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a href="https://github.com/dhilipdinesh100-del/smart-attend" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i> GitHub
                 </a>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
+<!-- EDUCATION SECTION -->
+<section id="education" class="education">
+    <h5>My Academic Path</h5>
+    <h2>Education</h2>
 
+    <div class="education-container">
+        <!-- B.Tech -->
+        <div class="edu-card">
+            <div class="edu-icon">
+                🎓
+            </div>
+            <div class="edu-content">
+                <h3>B.Tech — Electronics and Communication Engineering</h3>
+                <h4>Raghu Engineering College, Visakhapatnam</h4>
+                <div class="edu-meta">
+                    <span class="edu-badge"><i class="fas fa-calendar-alt"></i> 2024–2028</span>
+                    <span class="edu-badge highlight"><i class="fas fa-award"></i> CGPA: 9.07</span>
+                </div>
+                <p>
+                    Building a solid foundation in electronics, communication systems, and modern full-stack web development.
+                </p>
+            </div>
+        </div>
+
+        <!-- Senior Secondary -->
+        <div class="edu-card">
+            <div class="edu-icon">
+                🏫
+            </div>
+            <div class="edu-content">
+                <h3>Senior Secondary (Class XII)</h3>
+                <h4>Sri Chaitanya Junior College, Visakhapatnam</h4>
+                <div class="edu-meta">
+                    <span class="edu-badge"><i class="fas fa-calendar-alt"></i> 2022–2024</span>
+                    <span class="edu-badge highlight"><i class="fas fa-percentage"></i> 97.5%</span>
+                </div>
+                <p>
+                    Comprehensive study of Mathematics, Physics, and Chemistry with top-tier academic standing.
+                </p>
+            </div>
+        </div>
+
+        <!-- Secondary School -->
+        <div class="edu-card">
+            <div class="edu-icon">
+                📚
+            </div>
+            <div class="edu-content">
+                <h3>Secondary School (Class X)</h3>
+                <h4>Sri Bhavana Vidya Niketan, Visakhapatnam</h4>
+                <div class="edu-meta">
+                    <span class="edu-badge"><i class="fas fa-calendar-alt"></i> Completed 2019</span>
+                    <span class="edu-badge highlight"><i class="fas fa-percentage"></i> 94.5%</span>
+                </div>
+                <p>
+                    Strong foundational schooling with academic distinction in mathematics and science.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ACHIEVEMENTS & CERTIFICATIONS SECTION -->
+<section id="achievements" class="achievements">
+    <h5>Recognition & Growth</h5>
+    <h2>Achievements & Certifications</h2>
+
+    <div class="achievements-wrapper">
+        <!-- Smart India Hackathon Highlight Card -->
+        <div class="sih-card">
+            <div class="sih-header">
+                <div class="sih-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div>
+                    <h3>Smart India Hackathon (SIH) 2026 — InnovateGov</h3>
+                    <p class="sih-team">Team: <strong>QuantumCoders_REC</strong></p>
+                </div>
+            </div>
+
+            <div class="sih-meta">
+                <span class="highlight"><i class="fas fa-medal"></i> Shortlisted among 50 teams</span>
+                <span>Team ID: 135550</span>
+                <span>Problem Statement ID: SIH26136</span>
+            </div>
+
+            <p class="sih-desc">
+                Worked on <strong>InnovateGov</strong>, a proposed platform for startup discovery, eligibility screening, expert evaluation, controlled pilots, KPI validation and procurement tracking.
+            </p>
+        </div>
+
+        <!-- Certifications Grid -->
+        <div class="cert-grid">
+            <div class="cert-card">
+                <i class="fas fa-laptop-code"></i>
+                <h4>NxtWave Academy</h4>
+                <p>Full Stack Development Program</p>
+                <span class="cert-badge"><i class="fas fa-spinner fa-spin-pulse"></i> Currently pursuing</span>
+            </div>
+
+            <div class="cert-card">
+                <i class="fas fa-microchip"></i>
+                <h4>NPTEL — Digital Circuits</h4>
+                <p>12-week comprehensive course (Jul–Oct 2025)</p>
+                <span class="cert-badge"><i class="fas fa-check-circle"></i> Score: 60</span>
+            </div>
+
+            <div class="cert-card">
+                <i class="fas fa-square-root-variable"></i>
+                <h4>MathWorks — MATLAB Onramp</h4>
+                <p>Interactive MATLAB computational course (14 Aug 2025)</p>
+                <span class="cert-badge"><i class="fas fa-check-circle"></i> 100% Completed</span>
+            </div>
+
+            <div class="cert-card">
+                <i class="fas fa-globe"></i>
+                <h4>Web & Database Certifications</h4>
+                <p>Build your Own Static Website • Introduction to Databases • Dynamic Web Application</p>
+                <span class="cert-badge"><i class="fas fa-certificate"></i> Certified</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
 <section id="contact" class="contact">
-
     <h5>Get In Touch</h5>
     <h2>Contact Me</h2>
 
     <div class="contact-container">
-
         <div class="contact-info">
+            <a href="mailto:dhilipdinesh100@gmail.com" class="contact-box-link">
+                <div class="contact-box">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>dhilipdinesh100@gmail.com</p>
+                </div>
+            </a>
 
-            <div class="contact-box">
-                <i class="fas fa-envelope"></i>
-                <h3>Email</h3>
-                <p>dhilipdinesh100@gmail.com</p>
-            </div>
-
-            <div class="contact-box">
-                <i class="fas fa-phone"></i>
-                <h3>Phone</h3>
-                <p>8074645962</p>
-            </div>
+            <a href="tel:91807465962" class="contact-box-link">
+                <div class="contact-box">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>91807465962</p>
+                </div>
+            </a>
 
             <div class="contact-box">
                 <i class="fas fa-location-dot"></i>
                 <h3>Location</h3>
-                <p>Visakhapatnam</p>
+                <p>Visakhapatnam, Andhra Pradesh</p>
             </div>
-
         </div>
 
-   <form id="contact-form">
+        <form id="contact-form">
+            <input
+                type="text"
+                name="from_name"
+                placeholder="Your Name"
+                required>
 
-    <input
-        type="text"
-        name="from_name"
-        placeholder="Your Name"
-        required>
+            <input
+                type="email"
+                name="from_email"
+                placeholder="Your Email"
+                required>
 
-    <input
-        type="email"
-        name="from_email"
-        placeholder="Your Email"
-        required>
+            <textarea
+                name="message"
+                rows="6"
+                placeholder="Your Message"
+                required></textarea>
 
-    <textarea
-        name="message"
-        rows="6"
-        placeholder="Your Message"
-        required></textarea>
-
-    <button type="submit">
-        Send Message
-    </button>
-
-</form>
-
+            <button type="submit" id="submit-btn">
+                Send Message
+            </button>
+        </form>
     </div>
-
 </section>
+
+<!-- FOOTER -->
 <footer>
-
     <h2>Yelakala Dhilip</h2>
-
     <p>ECE Student | Full Stack Developer</p>
 
     <div class="footer-social">
-
-        <a href="https://github.com/dhilipdinesh100-del" target="_blank">
+        <a href="https://github.com/dhilipdinesh100-del" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <i class="fab fa-github"></i>
         </a>
 
-        <a href="https://www.linkedin.com/in/dhilipdinesh" target="_blank">
+        <a href="https://linkedin.com/in/dhilipdinesh" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i class="fab fa-linkedin"></i>
         </a>
 
-        <a href="mailto:dhilipdinesh100@gmail.com">
+        <a href="mailto:dhilipdinesh100@gmail.com" aria-label="Email">
             <i class="fas fa-envelope"></i>
         </a>
-
     </div>
 
     <p class="copyright">
-        © 2025 Yelakala Dhilip. All Rights Reserved.
+        © 2026 Yelakala Dhilip. All Rights Reserved.
     </p>
-
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
 emailjs.init({
     publicKey: "WtQt4otsHmmFOGusg",
 });
 </script>
-
 <script src="script.js"></script>
 </body>
 </html>
